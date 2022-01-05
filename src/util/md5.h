@@ -16,7 +16,7 @@ public:
 	std::string short_str() const;
 	std::array<int,4> digest() const;
 
-private:
+//private:
 	uint32_t h0,h1,h2,h3;
 };
 
