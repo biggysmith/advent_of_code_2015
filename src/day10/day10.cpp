@@ -30,7 +30,7 @@ auto look_and_say(const std::string& input)
     return ret;
 }
 
-auto part1(const std::string& input, int steps)
+auto process(const std::string& input, int steps)
 {
     auto ret = input;
     for(int i=0; i<steps; ++i){
@@ -41,6 +41,6 @@ auto part1(const std::string& input, int steps)
 
 void main()
 {
-    std::cout << "part1:" << part1("3113322113", 40) << std::endl;
-    std::cout << "part2:" << part1("3113322113", 50) << std::endl;
+    std::cout << "part1:" << process("3113322113", 40) << std::endl;
+    std::cout << "part2:" << process("3113322113", 50) << std::endl;
 }
