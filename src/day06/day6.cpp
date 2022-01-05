@@ -88,7 +88,7 @@ auto process(const std::vector<instruction_t>& instructions, bool part1)
         }
     }
 
-    return std::accumulate(grid.points.begin(), grid.points.end(), 0); // 14 190 930 too low 
+    return std::accumulate(grid.points.begin(), grid.points.end(), 0);
 }
 
 void main()
