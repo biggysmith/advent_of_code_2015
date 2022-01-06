@@ -76,15 +76,12 @@ auto process(const sues_t& in, bool part2)
 
         if(remove){
             it = sues.erase(it);
-            if(sues.size() == 1){
-                return sues.front().num;
-            }
         }else{
             it++;
         }
     }
 
-    return -1;
+    return sues.front().num;
 }
 
 void main()
