@@ -49,7 +49,6 @@ void search(const json11::Json& val, int& sum, bool part2)
     }
 }
 
-
 auto process(const json11::Json& tree, bool part2)
 {
     int sum = 0;
