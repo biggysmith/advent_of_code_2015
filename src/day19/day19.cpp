@@ -94,7 +94,7 @@ auto part2(const replacements_t& in)
         }
     }
 
-	return -1;
+    return -1;
 }
 
 void main()
