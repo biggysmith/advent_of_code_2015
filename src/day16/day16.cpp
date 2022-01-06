@@ -53,10 +53,10 @@ auto process(const sues_t& in, bool part2)
         { "perfumes:", 1 }
     };
 
-    for(auto it=sues.begin(); it!=sues.end(); )
+    for(auto sue=sues.begin(); sue!=sues.end(); )
     {
         bool remove = false;
-        for(auto& [thing,num] : it->things)
+        for(auto& [thing,num] : sue->things)
         {
             if(part2 && (thing == "cats:" || thing == "trees:")){
                 if((our_sue[thing] >= num)){
@@ -75,9 +75,9 @@ auto process(const sues_t& in, bool part2)
         }
 
         if(remove){
-            it = sues.erase(it);
+            sue = sues.erase(sue);
         }else{
-            it++;
+            sue++;
         }
     }
 
