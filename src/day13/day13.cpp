@@ -52,14 +52,14 @@ auto process(const egdes_t& edges, bool part2)
 
     graph_t graph;
     for(auto& edge : edges){
-        graph[edge.from][edge.to] = {edge.from,edge.to,edge.change};
+        graph[edge.from][edge.to] = {edge.from, edge.to, edge.change};
         guests.insert(edge.from);
     }
 
     if(part2){
         for(auto& name : guests){
-            graph[name]["biggy"] = {name,"biggy",0};
-            graph["biggy"][name] = {"biggy",name,0};
+            graph[name]["biggy"] = {name, "biggy", 0};
+            graph["biggy"][name] = {"biggy", name, 0};
         }
         guests.insert("biggy");
     }
