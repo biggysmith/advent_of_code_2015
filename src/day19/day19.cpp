@@ -77,7 +77,7 @@ auto part2(const replacements_t& in)
             {
                 size_t pos = molecule.find(to, 0);
                 if (pos != std::string::npos)
-			    {
+                {
                     steps++;
                     molecule.replace(pos, to.length(), from);
                     if(molecule == "e"){
