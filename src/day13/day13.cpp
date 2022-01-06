@@ -48,24 +48,24 @@ int mod(int a,int b){
 
 auto process(const egdes_t& edges, bool part2)
 {
-    std::set<std::string> dst;
+    std::set<std::string> guests;
 
     graph_t graph;
     for(auto& edge : edges){
         graph[edge.from][edge.to] = {edge.from,edge.to,edge.change};
-        dst.insert(edge.from);
+        guests.insert(edge.from);
     }
 
     if(part2){
-        for(auto& name : dst){
+        for(auto& name : guests){
             graph[name]["biggy"] = {name,"biggy",0};
             graph["biggy"][name] = {"biggy",name,0};
         }
-        dst.insert("biggy");
+        guests.insert("biggy");
     }
 
     int max_dist = 0;
-    std::vector<std::string> names(dst.begin(), dst.end());
+    std::vector<std::string> names(guests.begin(), guests.end());
 
     do {
         int local_sum = 0;
