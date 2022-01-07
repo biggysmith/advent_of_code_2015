@@ -35,11 +35,7 @@ std::vector<instruction_t> load_input(const std::string& file){
 
 struct program_t
 {
-    program_t(const std::vector<instruction_t>& in) : instructions(in) {
-        for(char c='a'; c<='d'; ++c){
-            regs[std::string(1,c)] = 0;
-        }
-    }
+    program_t(const std::vector<instruction_t>& in) : instructions(in) {}
 
     void run()
     {
